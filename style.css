@@ -42,13 +42,12 @@ body {
 }
 
 main {
-    width: 90%;
+    width: 337.5px;
     background-color: var(--light-grayish-blue);
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: ;
 
 }
 
@@ -79,6 +78,7 @@ hr {
 
 .collapse-group {
     height: 1.2em;
+    width: 90%;
     overflow:hidden;
     cursor: pointer;
 }
@@ -91,9 +91,12 @@ hr {
 
 .collapse-group img{
     display:inline-block;
+    
+    transition: rotate .1s;
 }
 
 
 .collapse-group p:first-of-type {
     display:inline-block;
 }
+
