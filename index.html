@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
+  <style>
+    .attribution { font-size: 11px; text-align: center; display:none;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <main>
+      <div class="illustration-group">
+        <div class="mobile-illustration">
+          <img src="./images/illustration-woman-online-mobile.svg" alt="a woman in front of a large monitor" class="illustration">
+          <img src="./images/bg-pattern-mobile.svg" alt="" class="illustration-shadow">
+        </div>
+        <div class="desktop-illustration">
+          <img src="./images/illustration-woman-online-desktop.svg" alt="a woman in front of a large monitor">
+          <img src="./images/illustration-box-desktop.svg" alt="a box">
+          <img src="./images/bg-pattern-desktop.svg" alt="" class="illustration-shadow">
+        </div>
+      </div>
+      <h1>
+        FAQ
+      </h1>
+      <div id = "team-query" class = "collapse-group" onclick="handleCollapseGroup(this.id)">
+        <p>
+        How many team members can I invite?
+        </p>
+        <img src="./images/icon-arrow-down.svg" alt="" class="collapser-icon">
+        <p class>
+        You can invite up to 2 additional users on the Free plan. There is no limit on 
+        team members for the Premium plan.
+        </p>
+      </div>
+      <hr>
+      <div class = "collapse-group file-size-query">
+        <p>
+        What is the maximum file upload size?
+        </p>
+        <img src="./images/icon-arrow-down.svg" alt="" class="collapser-icon">
+        <p>
+        No more than 2GB. All files in your account must fit your allotted storage space.
+        </p>
+      </div>
+      <hr>
+      <div class = "collapse-group password-query">
+        <p>
+        How do I reset my password?
+        </p>
+        <img src="./images/icon-arrow-down.svg" alt="" class="collapser-icon">
+        <p>
+        Click “Forgot password” from the login page or “Change password” from your profile page.
+        A reset link will be emailed to you.
+        </p>
+      </div>
+      <hr>
+      <div class = "collapse-group subsription-query">
+        <p>
+        Can I cancel my subscription?
+        </p>
+        <img src="./images/icon-arrow-down.svg" alt="" class="collapser-icon">
+        <p>
+        Yes! Send us a message and we’ll process your request no questions asked.
+        </p>
+      </div>
+      <hr>
+      <div class = "collapse-group support-query">
+        <p>
+        Do you provide additional support?
+        </p>
+        <img src="./images/icon-arrow-down.svg" alt="" class="collapser-icon">
+        <p>
+        Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        </p>
+      </div>
+      <hr>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Kirp</a>.
+      </div>
+    </main>
+  </div>
+</body>
+</html>
