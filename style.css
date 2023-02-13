@@ -29,8 +29,10 @@
 }
 
 body {
+    font-family: KhumbSans;
     font-size: 16px;
     background-color: var(--soft-violet);
+    font-weight: 400;
 }
 
 .wrapper {
@@ -43,13 +45,16 @@ body {
 
 main {
     width: 337.5px;
+    min-width: 280px;
     background-color: var(--light-grayish-blue);
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    border-radius: 25px;
+    margin-top: 100px;
 }
+
 
 
 .desktop-illustration {
@@ -72,31 +77,46 @@ main {
 }
 
 hr {
-    width: 80%;
+    width: 90%;
     /* height: 1em; */
+    color: var(--light-grayish-blue);
+}
+
+
+.main-text {
+    padding: 1em 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .collapse-group {
-    height: 1.2em;
     width: 90%;
+    height: 1.2em;
     overflow:hidden;
-    cursor: pointer;
+    padding: 1em 0;
 }
-
-.collapse-group:focus {
-    height: auto;
-}
-
 
 
 .collapse-group img{
     display:inline-block;
-    
     transition: rotate .1s;
+    cursor:pointer;
 }
 
+.collapse-group p:last-of-type {
+    padding: 1em 0;
+    color: var(--dark-grayish-blue);
+    font-size: 0.85em;
+}
 
-.collapse-group p:first-of-type {
+.query-header {
     display:inline-block;
+    cursor: pointer;
+}
+
+.query-header:hover {
+    color: var(--soft-red);
 }
 
