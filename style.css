@@ -46,7 +46,7 @@ body {
 main {
     width: 21.1em;
     min-width: 17.5em;
-    background-color: var(--light-grayish-blue);
+    background-color: white;
     display:flex;
     flex-direction: column;
     justify-content: center;
