@@ -31,7 +31,7 @@
 body {
     font-family: KhumbSans;
     font-size: 16px;
-    background-color: var(--soft-violet);
+    background-image: linear-gradient(var(--soft-violet),var(--soft-blue));
     font-weight: 400;
 }
 
@@ -44,8 +44,8 @@ body {
 }
 
 main {
-    width: 337.5px;
-    min-width: 280px;
+    width: 21.1em;
+    min-width: 17.5em;
     background-color: var(--light-grayish-blue);
     display:flex;
     flex-direction: column;
@@ -56,8 +56,16 @@ main {
 }
 
 
-
 .desktop-illustration {
+    width: 100%;
+    display: none;
+}
+
+#desktop-illustration, #desktop-illustration-box, #desktop-shadow{
+    position: absolute;
+}
+
+#desktop-illustration-box {
     display: none;
 }
 
@@ -71,17 +79,19 @@ main {
     cursor: pointer;
 }
 
-.illustration {
+#mobile-illustration {
     position: absolute;
     top: -6.8em;
 }
 
 hr {
     width: 90%;
-    /* height: 1em; */
     color: var(--light-grayish-blue);
 }
 
+h1 {
+    padding-bottom: .5em;
+}
 
 .main-text {
     padding: 1em 0;
@@ -96,17 +106,25 @@ hr {
     height: 1.2em;
     overflow:hidden;
     padding: 1em 0;
+    position: relative;
 }
 
 
 .collapse-group img{
-    display:inline-block;
+    position: absolute;
+    right: .1em;
+    top: 1.5em;
     transition: rotate .1s;
     cursor:pointer;
 }
 
+.collapse-group p:first-of-type {
+    display: inline-block;
+}
+
 .collapse-group p:last-of-type {
-    padding: 1em 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
     color: var(--dark-grayish-blue);
     font-size: 0.85em;
 }
@@ -120,3 +138,53 @@ hr {
     color: var(--soft-red);
 }
 
+
+@media(min-width: 1000px) {
+    main {
+        margin-top: 0;
+        flex-direction: row;
+        width: 53.75em;
+        overflow: hidden;
+    }
+
+    .illustration-group {
+        width: 50%;
+        position: relative;
+    }
+
+    .mobile-illustration {
+        display: none;
+    }
+
+    .desktop-illustration {
+        display: initial;
+    }
+
+    #desktop-illustration {
+        left: -5em;
+        top: -12em;
+        z-index: 1;
+    }
+
+    #desktop-illustration-box {
+        display: initial;
+        transform: translate(-26.8em, 2.2em);
+        z-index: 2;
+    }
+
+    #desktop-shadow {
+        width: 53.75em;
+        left: -29em;
+        top: -30em;
+    }
+    .main-text {
+        margin: 3em 0;
+        width: 50%;
+        margin-right: 2em;
+    }
+
+    h1 {
+        margin-left: .72em;
+        margin-right: auto;
+    }
+}
